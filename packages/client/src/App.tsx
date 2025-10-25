@@ -1,17 +1,28 @@
-import { useEffect, useState } from 'react';
-import { Button } from './components/ui/button';
+import { OcularImage } from './components/OcularImage';
 
 function App() {
-   const [message, setMessage] = useState('');
-   useEffect(() => {
-      fetch('/api/hello')
-         .then((res) => res.json())
-         .then((data) => setMessage(data.message));
-   }, []);
    return (
-      <div className="p-4 bg-stone-400">
-         <p className="text-s tone-50 text-3xl">{message}</p>
-         <Button variant={'secondary'}>Click Here!</Button>
+      <div className="min-h-screen bg-background py-8">
+         <div className="mx-auto max-w-5xl px-4 space-y-6">
+            {/* Main Content Frame */}
+            <OcularImage title="Ocular Image">
+               <div className="space-y-4">
+                  <img
+                     src="./images/diabetic_retinopathy.jpg"
+                     alt="textbook diabetic retinopathy"
+                     className="w-full max-w-md mx-auto rounded-lg border border-border shadow-lg"
+                  />
+                  <p className="text-muted-foreground text-center font-mono text-sm">
+                     Diabetic Retinopathy
+                     <br />
+                     source: Univeristy of Iowa <br />
+                     <strong>Patient A</strong>
+                  </p>
+               </div>
+            </OcularImage>
+
+            {/* Chat Section */}
+         </div>
       </div>
    );
 }
