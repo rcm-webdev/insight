@@ -1,3 +1,4 @@
+import ChatBot from './components/OcularChat';
 import { OcularImage } from './components/OcularImage';
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
       <div className="min-h-screen bg-background py-8">
          <div className="mx-auto max-w-5xl px-4 space-y-6">
             {/* Main Content Frame */}
-            <OcularImage title="Ocular Image">
+            <OcularImage title="Insight Lens">
                <div className="space-y-4">
                   <img
                      src="./images/diabetic_retinopathy.jpg"
@@ -13,15 +14,19 @@ function App() {
                      className="w-full max-w-md mx-auto rounded-lg border border-border shadow-lg"
                   />
                   <p className="text-muted-foreground text-center font-mono text-sm">
+                     {/* make this dynamic with list of diagnosis based on confidence level */}
                      Diabetic Retinopathy
                      <br />
-                     source: Univeristy of Iowa <br />
-                     <strong>Patient A</strong>
+                     {/* import source from form that will provided */}
+                     confidence score: 95% <br />
                   </p>
                </div>
             </OcularImage>
 
             {/* Chat Section */}
+            <OcularImage>
+               <ChatBot />
+            </OcularImage>
          </div>
       </div>
    );
