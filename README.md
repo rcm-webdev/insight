@@ -1,4 +1,4 @@
-# fullstack_llm_template
+# Insight Lens
 
 To install dependencies:
 
