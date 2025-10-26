@@ -9,16 +9,23 @@ function App() {
             <OcularImage title="Insight Lens">
                <div className="space-y-4">
                   <img
-                     src="./images/diabetic_retinopathy.jpg"
-                     alt="textbook diabetic retinopathy"
+                     src="./images/Patient013_R.jpg"
+                     alt="moderate diabetic retinopathy with maculopathy"
                      className="w-full max-w-md mx-auto rounded-lg border border-border shadow-lg"
                   />
                   <p className="text-muted-foreground text-center font-mono text-sm">
                      {/* make this dynamic with list of diagnosis based on confidence level */}
-                     Diabetic Retinopathy
+                     Moderate diabetic retinopathy with maculopathy
                      <br />
                      {/* import source from form that will provided */}
-                     confidence score: 95% <br />
+                     diabetic retinopathy grade: 5 <br />
+                     <a
+                        href="https://github.com/SRahimDR/DR-image-dataset/tree/main"
+                        className="text-sky-500"
+                        target="_blank"
+                     >
+                        source
+                     </a>
                   </p>
                </div>
             </OcularImage>
